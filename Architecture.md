@@ -14,19 +14,19 @@
 1. Orders  
 1. Cart
 
-#### User Dashboard
+#### USER DASHBOARD
 1. Home page   
       - search bar, navbar, images and beautification 
 2. Item wise pages  
       -  shoes, clothes etc.
 3. Each product will have its own viewing page
 
-#### Vendor dashboard:
+#### VENDOR DASHBOARD:
 Form to fill for what item to sell and details for the same.
 
 
 ## BACK END
-
+Connecting the front end to database and adding a little functionality in the website
 
 ## DATABASE
 
