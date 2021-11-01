@@ -11,15 +11,16 @@ Register page-
 Forgot Password page
 
 #### USER PROFILE:
-1.Cart
-2.Orders
-
+1. Orders
+1. Cart
 
 
 ## BACK END
 
 
 ## DATABASE
+
+
 
 
 
