@@ -4,17 +4,23 @@
 ### FEATURES
 
 #### USER AUTHENTICATION:
-Login page
-Register page
+Login page-
+  users as well as vendors
+Register page-
+  users as well as vendors 
 Forgot Password page
 
-
+#### USER PROFILE:
+1.Cart
+2.Orders
 
 
 
 ## BACK END
 
+
 ## DATABASE
+
 
 
 
