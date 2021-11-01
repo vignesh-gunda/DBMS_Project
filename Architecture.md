@@ -15,7 +15,7 @@
 1. Cart
 
 #### VENDOR PROFILE  
-1. Previously sld items   
+1. Previously sold items   
 2. Previous buyers
 
 #### USER DASHBOARD
