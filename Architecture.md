@@ -22,3 +22,4 @@ Forgot Password
 <!-- separate database for username password and other things -->
 <!-- tight security -->
 <!-- database vs file space -->
+<!-- convert images to base 64 -->
