@@ -4,9 +4,9 @@
 ### FEATURES
 
 #### USER AUTHENTICATION:
-Login
-Register
-Forgot Password
+Login page
+Register page
+Forgot Password page
 
 
 
