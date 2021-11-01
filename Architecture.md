@@ -14,7 +14,7 @@
 #### USER PROFILE:
 1. Orders  
 
-3. Cart
+1. Cart
 
 #### User Dashboard
 1. Home page - search bar, navbar, images and beautification 
@@ -31,7 +31,8 @@ Form to fill for what item to sell and details for the same.
 ## DATABASE
 
 1. User information database:  
-  - Table for Username, Email, Phone number and other private user information
+  - Table for Username, Email, Phone number and other private user information  
+  
 1. Profile database:  
       - Table for previous orders 
       - Table for cart contents
