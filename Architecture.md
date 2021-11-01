@@ -20,7 +20,11 @@
 
 ## DATABASE
 
-
+1. User information database:  
+  - Table for Username, Email, Phone number and other private user information
+1. Profile database:  
+      - Table for previous orders 
+      - Table for cart contents
 
 
 
