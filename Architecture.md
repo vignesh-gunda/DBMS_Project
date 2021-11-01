@@ -10,9 +10,13 @@
   
 3. Forgot Password page
 
-#### USER PROFILE:
+#### USER PROFILE
 1. Orders  
 1. Cart
+
+#### VENDOR PROFILE  
+1. Previously sld items   
+2. Previous buyers
 
 #### USER DASHBOARD
 1. Home page   
