@@ -4,10 +4,10 @@
 ### FEATURES
 
 #### USER AUTHENTICATION:
-Login page-
-  users as well as vendors
-Register page-
-  users as well as vendors 
+Login page-  
+users as well as vendors
+Register page-  
+users as well as vendors 
 Forgot Password page
 
 #### USER PROFILE:
