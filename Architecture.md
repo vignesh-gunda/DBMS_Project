@@ -4,16 +4,15 @@
 
 #### USER AUTHENTICATION:
 1. Login page-  
-  - users as well as vendors    
+  users as well as vendors    
   
 1. Register page-  
-  - users as well as vendors   
+  users as well as vendors   
   
 1. Forgot Password page
 
 #### USER PROFILE:
 1. Orders  
-
 1. Cart
 
 #### User Dashboard
@@ -33,7 +32,7 @@ Form to fill for what item to sell and details for the same.
 1. User information database:  
   - Table for Username, Email, Phone number and other private user information  
   
-1. Profile database:  
+2. Profile database:  
       - Table for previous orders 
       - Table for cart contents
 
