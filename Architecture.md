@@ -3,8 +3,8 @@
 
 
 #### USER AUTHENTICATION:
-1. Login page-  
-  users as well as vendors    
+1. Login page
+users as well as vendors    
   
 1. Register page-  
   users as well as vendors   
