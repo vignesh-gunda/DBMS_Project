@@ -4,11 +4,11 @@
 ### FEATURES
 
 #### USER AUTHENTICATION:
-Login page-  
+1.Login page-  
   users as well as vendors  
-Register page-  
+1.Register page-  
   users as well as vendors 
-Forgot Password page
+1.Forgot Password page
 
 #### USER PROFILE:
 1. Orders
