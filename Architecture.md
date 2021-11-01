@@ -2,9 +2,13 @@
 ## FRONT END
 
 ### FEATURES
+
+#### USER AUTHENTICATION:
 Login
 Register
 Forgot Password
+
+
 
 
 
