@@ -43,7 +43,11 @@ Connecting the front end to database and adding a little functionality in the we
 
 
 ### FRONT END GRAPHIC REPRESENTATION
-![arch_front](https://user-images.githubusercontent.com/67188124/141486309-92b534a9-29dd-43e7-829f-ce3d74c586ef.jpeg)![one](https://user-images.githubusercontent.com/69295385/141489463-dca199c8-0956-4a7b-84cf-fc6a0219241f.jpeg)![two](https://user-images.githubusercontent.com/69295385/141489507-0fd1604d-787c-43a8-91e1-0ff866623b08.jpeg)
+![arch_front](https://user-images.githubusercontent.com/67188124/141486309-92b534a9-29dd-43e7-829f-ce3d74c586ef.jpeg)
+
+![one](https://user-images.githubusercontent.com/69295385/141489463-dca199c8-0956-4a7b-84cf-fc6a0219241f.jpeg)
+
+![two](https://user-images.githubusercontent.com/69295385/141489507-0fd1604d-787c-43a8-91e1-0ff866623b08.jpeg)
 
 
 
