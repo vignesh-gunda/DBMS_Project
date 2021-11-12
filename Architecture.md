@@ -42,7 +42,7 @@ Connecting the front end to database and adding a little functionality in the we
       - Table for cart contents
 
 
-
+### FRONT END GRAPHIC REPRESENTATION
 ![arch_front](https://user-images.githubusercontent.com/67188124/141486309-92b534a9-29dd-43e7-829f-ce3d74c586ef.jpeg)
 
 
