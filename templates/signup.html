@@ -1,0 +1,44 @@
+<doctype html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="{{ url_for('static', filename='css/signup.css') }}" rel="stylesheet" type="text/css" />
+		<title>Signup</title>
+	</head>
+	<div class="header">
+        <a href="/images/logo.jpg" class="logo">CompanyLogo</a>
+        <div class="header-right">
+          <a href="/">Back</a>
+          <!-- <a href="/signup"></a>
+          <a href="/cart"><i class="fa fa-shopping-cart fa-2x"></i></a> -->
+          
+        </div>
+      </div>
+<form method="post" action="/register">
+	<div class="container">
+	  <h2>Register</h2>
+	  <p>Please fill in this form to create an account.</p>
+	  <hr>
+
+	  
+	  <label for="name"><b>Name</b></label>
+	  <input name="inputName" value="" type="text" placeholder="Name" autocomplete="off" required>
+  
+	  <label for="email"><b>Email</b></label>
+	  <input name="inputEmail" value="" type="text" placeholder="Email" autocomplete="off" required>
+  
+	  <label for="psw"><b>Password</b></label>
+	  <input name="inputPassword" value="" type="password" placeholder="Password" autocomplete="off" required>
+
+	  <hr>
+  
+	  <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+	  <input type="submit" value="Submit" class="registerbtn">
+	</div>
+  
+	<div class="container signin">
+	  <p>Already have an account? <a href="/login">Sign in</a>.</p>
+	</div>
+  </form>

@@ -1,0 +1,59 @@
+<doctype html>
+
+
+<doctype html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="{{ url_for('static', filename='css/signup.css') }}" rel="stylesheet" type="text/css" />
+		<title>User Login</title>
+	</head>
+	<div class="header">
+        <a href="/images/logo.jpg" class="logo">CompanyLogo</a>
+        <div class="header-right">
+          <a href="/ForgotPassword">Forgot Password?</a>
+          <a href="/">Back</a>
+
+          <!-- <a href="/cart"><i class="fa fa-shopping-cart fa-2x"></i></a> -->
+          
+        </div>
+      </div>
+      
+	<p>
+		{% with messages = get_flashed_messages() %}
+		  {% if messages %}
+			<ul class=flashes>
+			{% for message in messages %}
+			  <li>{{ message }}</li>
+			{% endfor %}
+			</ul>
+		  {% endif %}
+		{% endwith %}
+	</p>
+
+<form method="post" action="/submit">
+	<div class="container">
+	  <h2>Login</h2>
+	  <p>Welcome back! we've missed you.</p>
+	  <hr>
+
+	  
+	
+	  <label for="email"><b>Email</b></label>
+	  <input name="inputEmail" value="" type="text" placeholder="Email" autocomplete="off" required>
+  
+	  <label for="psw"><b>Password</b></label>
+	  <input name="inputPassword" value="" type="password" placeholder="Password" autocomplete="off" required>
+
+	  <hr>
+  
+	  
+	  <input type="submit" value="Submit" class="registerbtn">
+	</div>
+  
+	<div class="container signin">
+	  <p>Don't have an account? <a href="/signup">Sign up.</a>.</p>
+	</div>
+  </form>
