@@ -1,6 +1,6 @@
 
 
-Create table 'tbl_user'
+-- Create table 'tbl_user'
 
 CREATE TABLE `tbl_user`
 
