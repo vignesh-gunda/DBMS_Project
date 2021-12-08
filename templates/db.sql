@@ -16,4 +16,5 @@ CREATE TABLE `tbl_user`
 
 PRIMARY KEY (`user_id`) ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
- 
+--  Create table cart
+ CREATE TABLE cart(email varchar(30), product_name varchar(30), product_code varchar(30), price varchar(10), quantity int(4));
