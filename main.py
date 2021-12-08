@@ -5,8 +5,6 @@ from flask import flash, session, render_template, request, redirect, url_for
 #from werkzeug import generate_password_hash, check_password_hash
 from werkzeug.security import generate_password_hash, check_password_hash
 
-
-
 @app.route('/')
 def index():
 	if 'email' in session:
@@ -54,19 +52,21 @@ def logout():
 @app.route('/signup')
 def add_user_view():
 	return render_template('signup.html')
+	
 		
 @app.route('/new_user', methods=['POST'])
 def add_user():
 	conn = None
 	cursor = None
-	try:		
-		_name = request.form['inputName']
-		_phone = request.form['inputPhone']
-		_email = request.form['inputEmail']
-		_password = request.form['inputPassword']
-		# validate the received values
-		if _name and _email and _password and _phone and request.method == 'POST':
-			
+	_name = request.form['inputName']
+	_phone = request.form['inputPhone']
+	_email = request.form['inputEmail']
+	_password = request.form['inputPassword']
+	_confirmpassword = request.form['inputconfirmPassword']
+	# validate the received values
+	
+	if (_password==_confirmpassword) and ('@' in _email) and (len(_phone)==10) and (_phone.isdigit()):
+		if _name and _email and _password and _confirmpassword and _phone and request.method == 'POST':
 			conn = mysql.connect()
 			cursor = conn.cursor()
 			sql_check = "SELECT * FROM tbl_user WHERE user_email=%s"
@@ -75,7 +75,7 @@ def add_user():
 			row = cursor.fetchone()
 			if row:
 				flash('Error! User already exists!')
-				return render_template('signup.html')		
+				return render_template('signup.html')
 			_hashed_password = generate_password_hash(_password)
 			# save edits
 			sql = "INSERT INTO tbl_user(user_name, phn_no, user_email, user_password) VALUES(%s, %s, %s, %s)"
@@ -84,17 +84,18 @@ def add_user():
 			cursor.execute(sql, data)
 			conn.commit()
 			flash('User added successfully!')
-			return redirect('/')
-
-		else:
-			return 'Error while adding user'
-	except Exception as e:
-		print(e)
-	finally:
-		cursor.close() 
-		conn.close()
-		
-
+			return redirect('/login')
+	else:
+		if (_password!=_confirmpassword):
+    		flash("Passwords Don't Match")
+		if('@' not in _email):
+    		flash("Invalid Email")
+		if(len(_phone)!=10):
+    		flash("Invalid Phone Number length")
+		if not _phone.isdigit():
+    		flash("Invalid Phone number type")
+		return redirect('/signup')	
+				
 
 @app.route('/add', methods=['POST'])
 def add_product_to_cart():
