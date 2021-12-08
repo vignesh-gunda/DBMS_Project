@@ -29,7 +29,7 @@ PRIMARY KEY (`user_id`) );
                    
                    product_code varchar(30),
                    
-                   price varchar(10), 
+                   price varchar(15), 
                    
                    quantity int(4), 
                    
@@ -48,6 +48,7 @@ PRIMARY KEY (`user_id`) );
     product_name varchar(50) not null,
      
     product_code varchar(10) not null,
-
+     
+    product_quantity varchar(10) NOT NULL
 
 );
