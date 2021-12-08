@@ -5,6 +5,16 @@
 	<link href="{{ url_for('static', filename='css/cartstyle.css') }}" rel="stylesheet" type="text/css" />
 </head>
 <body>
+
+	<div class="header">
+        <a href="/images/logo.jpg" class="logo">CompanyLogo</a>
+        <div class="header-right">
+          <a href="/logout">Logout</a>
+          <a href="/cart"><i class="fa fa-shopping-cart fa-2x"></i></a>
+          
+        </div>
+      </div>
+      
 	<div>
 		{% with messages = get_flashed_messages() %}
 		  {% if messages %}
