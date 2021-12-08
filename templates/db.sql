@@ -18,6 +18,8 @@ CREATE TABLE `tbl_user`
     
     user_city varchar(50) DEFAULT NULL,
  
+    user_state varchar(50) DEFAULT NULL,
+ 
     user_zipcode varchar(15) DEFAULT NULL,
 
 PRIMARY KEY (`user_id`) );
