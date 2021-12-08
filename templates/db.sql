@@ -42,6 +42,8 @@ PRIMARY KEY (`user_id`) );
     OrderID int NOT NULL,
 
     user_email varchar(30) NOT NULL,
+     
+    user_name varchar(30) NOT NULL,
 
     product_id int unsigned NOT null,
      
