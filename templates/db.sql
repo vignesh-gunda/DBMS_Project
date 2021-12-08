@@ -4,17 +4,27 @@
 
 CREATE TABLE `tbl_user`
 
-(   `user_id` bigint(20) NOT NULL AUTO_INCREMENT,
+(   `user_id` bigint(20) AUTO_INCREMENT,
 
-    `user_name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NOT NULL,
+    `user_name` varchar(45) NOT NULL,
 
-    `phn_no` varchar(10)  COLLATE utf8mb3_unicode_ci NOT NULL,  
+    `phn_no` varchar(10) NOT NULL,  
 
-    `user_email` varchar(45) unique COLLATE utf8_unicode_ci DEFAULT NOT NULL,
+    `user_email` varchar(45) NOT NULL,
 
-    `user_password` varchar(255) COLLATE utf8_unicode_ci DEFAULT NOT NULL,
+    `user_password` varchar(255) NOT NULL,
 
-PRIMARY KEY (`user_id`) ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+PRIMARY KEY (`user_id`) );
 
 --  Create table cart
- CREATE TABLE cart(email varchar(30), product_name varchar(30), product_code varchar(30), price varchar(10), quantity int(4));
+ CREATE TABLE cart(email varchar(30), 
+                   
+                   product_name varchar(30),
+                   
+                   product_code varchar(30),
+                   
+                   price varchar(10), 
+                   
+                   quantity int(4), 
+                   
+                   PRIMARY KEY (`product_code`));
