@@ -34,3 +34,20 @@ PRIMARY KEY (`user_id`) );
                    quantity int(4), 
                    
                    PRIMARY KEY (`product_code`));
+                   
+                   
+                   
+ CREATE TABLE Orders (
+
+    OrderID int NOT NULL,
+
+    user_email varchar(30) NOT NULL,
+
+    product_id int unsigned NOT null,
+     
+    product_name varchar(50) not null,
+     
+    product_code varchar(10) not null,
+
+
+);
