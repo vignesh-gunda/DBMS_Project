@@ -54,13 +54,14 @@ CREATE TABLE user_information
     user_email varchar(30) NOT NULL,
      
     user_name varchar(30) NOT NULL,
-
-    product_id int unsigned NOT null,
      
     product_name varchar(50) not null,
      
     product_code varchar(10) not null,
      
     product_quantity varchar(10) NOT NULL
+     
+    product_price int unsigned NOT null,
+    
 
 );
