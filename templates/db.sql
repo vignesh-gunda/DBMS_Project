@@ -18,8 +18,7 @@ CREATE TABLE `tbl_user`
 
 CREATE TABLE user_information
 
-(   user_id bigint(20),
- 
+(
     name varchar(45) NOT NULL,
 
     user_email varchar(45) NOT NULL,
