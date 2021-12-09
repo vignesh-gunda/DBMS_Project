@@ -13,29 +13,36 @@ CREATE TABLE `tbl_user`
     `user_email` varchar(45) NOT NULL,
 
     `user_password` varchar(255) NOT NULL,
- 
+
+     PRIMARY KEY (`user_id`) );
+
+CREATE TABLE `user_information`
+
+(   `user_id` bigint(20) AUTO_INCREMENT,
+
+    `user_email` varchar(45) NOT NULL,
+
     user_address varchar(400) DEFAULT NULL,
     
     user_city varchar(50) DEFAULT NULL,
  
     user_state varchar(50) DEFAULT NULL,
  
-    user_zipcode varchar(15) DEFAULT NULL,
+    user_zipcode varchar(15) DEFAULT NULL );
 
-PRIMARY KEY (`user_id`) );
 
 --  Create table cart
  CREATE TABLE cart(email varchar(30), 
                    
-                   product_name varchar(30),
+  product_name varchar(30),
                    
-                   product_code varchar(30),
+  product_code varchar(30),
                    
-                   price varchar(15), 
+  price varchar(15), 
                    
-                   quantity int(4), 
+  quantity int(4), 
                    
-                   PRIMARY KEY (`product_code`));
+  PRIMARY KEY (`product_code`));
                    
                    
                    
