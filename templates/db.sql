@@ -16,11 +16,13 @@ CREATE TABLE `tbl_user`
 
      PRIMARY KEY (`user_id`) );
 
-CREATE TABLE `user_information`
+CREATE TABLE user_information
 
-(   `user_id` bigint(20) AUTO_INCREMENT,
+(   user_id bigint(20),
+ 
+    name varchar(45) NOT NULL,
 
-    `user_email` varchar(45) NOT NULL,
+    user_email varchar(45) NOT NULL,
 
     user_address varchar(400) DEFAULT NULL,
     
@@ -28,7 +30,7 @@ CREATE TABLE `user_information`
  
     user_state varchar(50) DEFAULT NULL,
  
-    user_zipcode varchar(15) DEFAULT NULL );
+    user_zipcode varchar(15) DEFAULT NULL);
 
 
 --  Create table cart
