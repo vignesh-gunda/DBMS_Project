@@ -49,15 +49,15 @@ CREATE TABLE user_information
                    
  CREATE TABLE Orders (
 
-    OrderID int NOT NULL,
+    OrderID varchar(40) NOT NULL,
 
-    user_email varchar(30) NOT NULL,
+    user_email varchar(40) NOT NULL,
      
-    user_name varchar(30) NOT NULL,
+    user_name varchar(40) NOT NULL,
      
     product_name varchar(50) not null,
      
-    product_code varchar(10) not null,
+    product_code varchar(30) not null,
      
     product_price int unsigned NOT null,
     
