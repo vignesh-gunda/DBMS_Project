@@ -2,8 +2,8 @@ import pymysql
 from app import app
 from db_config import mysql
 from flask import flash, session, render_template, request, redirect, url_for
-#from werkzeug import generate_password_hash, check_password_hash
 from werkzeug.security import generate_password_hash, check_password_hash
+
 
 @app.route('/')
 def index():
@@ -12,7 +12,6 @@ def index():
 		return redirect('/cart')
 	return render_template('index.html')
 
-	
 @app.route('/login')
 def login():
 	return render_template('login.html')
@@ -21,9 +20,10 @@ def login():
 def login_submit():
 	_email = request.form['inputEmail']
 	_password = request.form['inputPassword']
+	
 	# validate the received values
 	if _email and _password and request.method == 'POST':
-		#check user exists			
+		#check user exists
 		conn = mysql.connect()
 		cursor = conn.cursor()
 		sql = "SELECT * FROM tbl_user WHERE user_email=%s"
@@ -48,7 +48,6 @@ def logout():
 	session.pop('email', None)
 	return render_template('index.html')
 
-
 @app.route('/signup')
 def add_user_view():
 	return render_template('signup.html')
@@ -58,44 +57,49 @@ def add_user_view():
 def add_user():
 	conn = None
 	cursor = None
-	_name = request.form['inputName']
-	_phone = request.form['inputPhone']
-	_email = request.form['inputEmail']
-	_password = request.form['inputPassword']
-	_confirmpassword = request.form['inputconfirmPassword']
-	# validate the received values
+	try:
+		_name = request.form['inputName']
+		_phone = request.form['inputPhone']
+		_email = request.form['inputEmail']
+		_password = request.form['inputPassword']
+		_confirmpassword = request.form['inputconfirmPassword']
+		# validate the received values
 	
-	if (_password==_confirmpassword) and ('@' in _email) and (len(_phone)==10) and (_phone.isdigit()):
-		if _name and _email and _password and _confirmpassword and _phone and request.method == 'POST':
-			conn = mysql.connect()
-			cursor = conn.cursor()
-			sql_check = "SELECT * FROM tbl_user WHERE user_email=%s"
-			sql_where = (_email,)
-			cursor.execute(sql_check, sql_where)
-			row = cursor.fetchone()
-			if row:
-				flash('Error! User already exists!')
-				return render_template('signup.html')
-			_hashed_password = generate_password_hash(_password)
-			# save edits
-			sql = "INSERT INTO tbl_user(user_name, phn_no, user_email, user_password) VALUES(%s, %s, %s, %s)"
-			data = (_name, _phone, _email, _hashed_password,)
+		if (_password==_confirmpassword) and ('@' in _email) and (len(_phone)==10) and (_phone.isdigit()):
+			if _name and _email and _password and _confirmpassword and _phone and request.method == 'POST':
+				conn = mysql.connect()
+				cursor = conn.cursor()
+				sql_check = "SELECT * FROM tbl_user WHERE user_email=%s"
+				sql_where = (_email,)
+				cursor.execute(sql_check, sql_where)
+				row = cursor.fetchone()
+				if row:
+					flash('Error! User already exists!')
+					return render_template('signup.html')
+				_hashed_password = generate_password_hash(_password)
+				# save edits
+				sql = "INSERT INTO tbl_user(user_name, phn_no, user_email, user_password) VALUES(%s, %s, %s, %s)"
+				data = (_name, _phone, _email, _hashed_password,)
 			
-			cursor.execute(sql, data)
-			conn.commit()
-			flash('User added successfully!')
-			return redirect('/login')
-	else:
-		if (_password!=_confirmpassword):
-    		flash("Passwords Don't Match")
-		if('@' not in _email):
-    		flash("Invalid Email")
-		if(len(_phone)!=10):
-    		flash("Invalid Phone Number length")
-		if not _phone.isdigit():
-    		flash("Invalid Phone number type")
-		return redirect('/signup')	
-				
+				cursor.execute(sql, data)
+				conn.commit()
+				flash('User added successfully!')
+				return redirect('/login')
+		else:
+			if (_password!=_confirmpassword):
+    				flash("Passwords Don't Match")
+			if('@' not in _email):
+    				flash("Invalid Email")
+			if(len(_phone)!=10):
+    				flash("Invalid Phone Number length")
+			if not _phone.isdigit():
+    				flash("Invalid Phone number type")
+			return redirect('/signup')
+	except Exception as e:
+		print(e)
+	# finally:
+	# 	cursor.close()
+	# 	conn.close()
 
 @app.route('/add', methods=['POST'])
 def add_product_to_cart():
@@ -154,17 +158,21 @@ def add_product_to_cart():
 		
 @app.route('/cart')
 def products():
+	cursor = None
 	try:
-		conn = mysql.connect()
-		cursor = conn.cursor(pymysql.cursors.DictCursor)
-		cursor.execute("SELECT * FROM product")
-		rows = cursor.fetchall()
-		return render_template('cart.html', products=rows)
+		if 'email' in session:
+			conn = mysql.connect()
+			cursor = conn.cursor(pymysql.cursors.DictCursor)
+			cursor.execute("SELECT * FROM product")
+			rows = cursor.fetchall()
+			return render_template('cart.html', products=rows)
+		flash("Please Login First")
+		return render_template('index.html')
 	except Exception as e:
 		print(e)
-	finally:
-		cursor.close() 
-		conn.close()
+	# finally:
+		# cursor.close() 
+		# conn.close()
 
 @app.route('/empty')
 def empty_cart():
@@ -221,7 +229,7 @@ def edit_view():
 def update_user():
 	conn = None
 	cursor = None
-	try:		
+	try:
 		_name = request.form['inputName']
 		_email = request.form['inputEmail']
 		_password = request.form['inputPassword']
@@ -241,12 +249,14 @@ def update_user():
 			flash('User updated successfully!')
 			return redirect('/')
 		else:
-			return 'Error while updating user'
+			flash('Error while updating user')
+			return redirect('/edit')
+
 	except Exception as e:
 		print(e)
-	finally:
-		cursor.close() 
-		conn.close()
+	# finally:
+	# 	cursor.close() 
+	# 	conn.close()
 
 if __name__ == "__main__":
     app.run(debug=True)
