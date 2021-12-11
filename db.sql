@@ -1,4 +1,17 @@
 
+-- products table
+
+CREATE TABLE `product` (
+	`id` int unsigned COLLATE utf8mb4_unicode_ci NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+	`code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+	`image` text COLLATE utf8mb4_unicode_ci NOT NULL,
+	`price` double COLLATE utf8mb4_unicode_ci NOT NULL,
+    quantity int,
+    category varchar(40),
+	PRIMARY KEY (`id`)
+)
+
 
 -- Create table 'tbl_user'
 
