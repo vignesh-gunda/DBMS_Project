@@ -105,8 +105,20 @@ CREATE TABLE user_information
      
     product_price int unsigned NOT null,
     
-    product_quantity int NOT NULL
-     
+    product_quantity int NOT NULL);
     
+--     merchant table- personal info of merchants
+    CREATE TABLE `tbl_merchant`
+(   
+    `merchant_id` bigint(20) AUTO_INCREMENT,
 
+    `merchant_name` varchar(45) NOT NULL,
+
+    `merchant_phn_no` varchar(15) NOT NULL,  
+
+    `merchant_email` varchar(45) NOT NULL,
+
+    `merchant_password` varchar(255) NOT NULL,
+
+    PRIMARY KEY (`merchant_id`) 
 );
