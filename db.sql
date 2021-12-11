@@ -1,29 +1,49 @@
 
 -- products table
 
-CREATE TABLE `product` (
+CREATE TABLE `product`(
 	`id` int unsigned COLLATE utf8mb4_unicode_ci NOT NULL AUTO_INCREMENT,
 	`name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
 	`code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
 	`image` text COLLATE utf8mb4_unicode_ci NOT NULL,
 	`price` double COLLATE utf8mb4_unicode_ci NOT NULL,
-    quantity int,
-    category varchar(40),
-	PRIMARY KEY (`id`)
-);
+    	quantity int,
+    	category varchar(40),
+	PRIMARY KEY (`id`));
 
 -- products insert
-INSERT INTO `product` (`id`, `name`, `code`, `image`, `price`, `quantity`, `category` ) VALUES
-(1, 'American Tourist', 'AMTR01', 'product-images/bag.jpg', 12000.00, 1000, 'bags'),
-(2, 'EXP Portable Hard Drive', 'USB02', 'product-images/external-hard-drive.jpg', 5000.00, 20, 'tech'),
-(3, 'Shoes', 'SH03', 'product-images/shoes.jpg', 1000.00, 30, 'shoes'),
-(4, 'XP 1155 Intel Core Laptop', 'LPN4', 'product-images/laptop.jpg', 80000.00, 5, 'tech'),
-(5, 'FinePix Pro2 3D Camera', '3DCAM01', 'product-images/camera.jpg', 150000.00),
-(6, 'Simple Mobile', 'MB06', 'product-images/mobile.jpg', 3000.00),
-(7, 'Luxury Ultra thin Wrist Watch', 'WristWear03', 'product-images/watch.jpg', 3000.00),
-(8, 'Headphone', 'HD08', 'product-images/headphone.jpg', 400.00);
 
+INSERT INTO `product` (`id`, `name`, `code`, `image`, `price`)
+VALUES
+ (1, 'red dress', 'RDDR', 'product-images/dress.jpg', 4200.00, 30, 'clothes'),
 
+ (2, 'spl aviator-sunglasses', 'SASG', 'product-images/aviator-sunglasses.jpg', 2900.00, 20, 'accessories'),
+
+ (3, 'Shoes', 'SH01', 'product-images/shoes.jpg', 1000.00, 40, 'shoes'),
+
+ (4, 'hot pink scarf', 'HPS', 'product-images/scarf.jpg', 400.00, 40, 'clothes'),
+
+ (5, 'set of 3 ties', '3TS01', 'product-images/ties.jpg', 1200.00, 60, 'accessories'),
+
+ (6, 'Simple wallet xd', 'WLT06', 'product-images/wallets.jpg', 1500.00, 50, 'accessories'),
+
+ (7, 'LU1V handbag', 'IV04', 'product-images/handbag.jpg', 12000.00, 8, 'accessories'),
+
+ (8, 'UXI bandana', 'UXB', 'product-images/bandanas.jpg', 400.00, 10, 'accessories')
+
+ (9, 'CLK gloves', 'CGLK', 'product-images/gloves.jpg', 1400.00, 60, 'accessories')
+
+ (10 'multicoloured silk dress', 'MCSLK', 'product-images/mcsilkdress.jpg', 5400.00, 40, 'clothes')
+
+ (11 'heels', 'HL004', 'product-images/heels.jpg', 6400.00, 8, 'accessories')
+
+ (12 'wedges', 'WHL02', 'product-images/wedges.jpg', 5600.00, 8, 'accessories')
+
+ (13 'Denim jacket', 'DJKT1', 'product-images/denimjacket.jpg', 4400.00, 40, 'clothes')
+
+ (14 'Denim jacket', 'DJKT2', 'product-images/denimjacket2.jpg', 4400.00, 40, 'clothes')
+
+ (15 'UNX Boots', 'BO08', 'product-images/boots.jpg', 7800.00);
 -- Create table 'tbl_user'
 
 CREATE TABLE `tbl_user`
