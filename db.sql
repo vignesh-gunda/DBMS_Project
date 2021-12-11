@@ -85,7 +85,7 @@ CREATE TABLE user_information
      
     product_price int unsigned NOT null,
     
-    product_quantity varchar(10) NOT NULL
+    product_quantity int NOT NULL
      
     
 
