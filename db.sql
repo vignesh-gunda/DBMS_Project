@@ -29,19 +29,19 @@ VALUES
 
  (7, 'LU1V handbag', 'IV04', 'product-images/handbag.jpg', 12000.00, 8, 'accessories'),
 
- (8, 'UXI bandana', 'UXB', 'product-images/bandanas.jpg', 400.00, 10, 'accessories')
+ (8, 'UXI bandana', 'UXB', 'product-images/bandanas.jpg', 400.00, 10, 'accessories'),
 
- (9, 'CLK gloves', 'CGLK', 'product-images/gloves.jpg', 1400.00, 60, 'accessories')
+ (9, 'CLK gloves', 'CGLK', 'product-images/gloves.jpg', 1400.00, 60, 'accessories'),
 
- (10 'multicoloured silk dress', 'MCSLK', 'product-images/mcsilkdress.jpg', 5400.00, 40, 'clothes')
+ (10 'multicoloured silk dress', 'MCSLK', 'product-images/mcsilkdress.jpg', 5400.00, 40, 'clothes'),
 
- (11 'heels', 'HL004', 'product-images/heels.jpg', 6400.00, 8, 'accessories')
+ (11 'heels', 'HL004', 'product-images/heels.jpg', 6400.00, 8, 'accessories'),
 
- (12 'wedges', 'WHL02', 'product-images/wedges.jpg', 5600.00, 8, 'accessories')
+ (12 'wedges', 'WHL02', 'product-images/wedges.jpg', 5600.00, 8, 'accessories'),
 
- (13 'Denim jacket', 'DJKT1', 'product-images/denimjacket.jpg', 4400.00, 40, 'clothes')
+ (13 'Denim jacket', 'DJKT1', 'product-images/denimjacket.jpg', 4400.00, 40, 'clothes'),
 
- (14 'Denim jacket', 'DJKT2', 'product-images/denimjacket2.jpg', 4400.00, 40, 'clothes')
+ (14 'Denim jacket', 'DJKT2', 'product-images/denimjacket2.jpg', 4400.00, 40, 'clothes'),
 
  (15 'UNX Boots', 'BO08', 'product-images/boots.jpg', 7800.00);
 -- Create table 'tbl_user'
