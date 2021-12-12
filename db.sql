@@ -13,7 +13,7 @@ CREATE TABLE `product`(
 
 -- products insert
 
-INSERT INTO `product` (`id`, `name`, `code`, `image`, `price`)
+INSERT INTO `product` (`id`, `name`, `code`, `image`, `price`, quantity, category)
 VALUES
  (1, 'red dress', 'RDDR', 'product-images/dress.jpg', 4200.00, 30, 'clothes'),
 
@@ -43,7 +43,7 @@ VALUES
 
  (14, 'Denim jacket', 'DJKT2', 'product-images/denimjacket2.jpg', 4400.00, 40, 'clothes'),
 
- (15, 'UNX Boots', 'BO08', 'product-images/boots.jpg', 7800.00);
+ (15, 'UNX Boots', 'BO08', 'product-images/boots.jpg', 7800.00, 20, 'shoes');
 -- Create table 'tbl_user'
 
 CREATE TABLE `tbl_user`
