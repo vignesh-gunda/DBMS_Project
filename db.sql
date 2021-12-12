@@ -9,6 +9,7 @@ CREATE TABLE `product`(
 	`price` double COLLATE utf8mb4_unicode_ci NOT NULL,
     	quantity int,
     	category varchar(40),
+	merchant_id varchar(40),
 	PRIMARY KEY (`id`));
 
 -- products insert
