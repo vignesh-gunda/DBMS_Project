@@ -48,7 +48,7 @@ VALUES
 
  (16, 'Blue Print Dress', 'BPD7', 'product-images/D2.jpg', 2500.00, 20, 'clothes', 'drishti@gmail.com'),
 
- (17, 'Black Dress', 'LBD19', 'product-images/D3.jpg', 2350.00, 20, 'clothes', 'vignesh@gmail.com'),
+ (17, 'Black Dress', 'LBD19', 'product-images/D3.jpeg', 2350.00, 20, 'clothes', 'vignesh@gmail.com'),
 
  (18, 'White Dress', 'DW440', 'product-images/D4.jpg', 2100.00, 20, 'clothes', 'mihika@gmail.com'),
 
