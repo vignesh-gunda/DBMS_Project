@@ -42,3 +42,9 @@ Within the Database 'Hotpink', we have tables for different requirements
 <!-- tight security -->
 <!-- database vs file space -->
 <!-- convert images to base 64 -->
+
+
+
+![1](https://user-images.githubusercontent.com/89929088/145784695-9dd6f86f-908c-408e-9e97-82a9255024a6.png)
+![2](https://user-images.githubusercontent.com/89929088/145784797-3bff1510-2187-45ee-a0cb-0ffa0e556a0d.png)
+
