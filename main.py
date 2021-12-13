@@ -500,11 +500,10 @@ def merch_login_submit():
 
 @app.route('/merch_home')
 def merch_homepage():
-	print("Hello")
 	if 'merchant_email' in session:
-		print("Hello")
 		username = session['merchant_email']
 		return render_template('merch_home.html')
+	return render_template('merch_login.html')
 
 @app.route('/merch_logout')
 def merch_logout():
