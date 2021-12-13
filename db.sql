@@ -14,9 +14,9 @@ CREATE TABLE `product`(
 
 -- products insert
 
- INSERT INTO `products` (`id`, `name`, `code`, `image`, `price`, quantity, category, merchant_id)
+ INSERT INTO `product` (`id`, `name`, `code`, `image`, `price`, quantity, category, merchant_id)
 VALUES
- (1, 'red dress', 'RDDR', 'product-images/dress.jpg', 4200.00, 30, 'clothes', 'drishti@gmail.com'),
+ (1, 'Hat', 'RDDR', 'product-images/hats.jpg', 4200.00, 30, 'clothes', 'drishti@gmail.com'),
 
  (2, 'spl aviator-sunglasses', 'SASG', 'product-images/aviator-sunglasses.jpg', 2900.00, 20, 'accessories', 'mihika@gmail.com'),
 
@@ -34,17 +34,17 @@ VALUES
 
  (9, 'CLK gloves', 'CGLK', 'product-images/gloves.jpg', 1400.00, 60, 'accessories', 'vignesh@gmail.com'),
 
- (10, 'multicoloured silk dress', 'MCSLK', 'product-images/mcsilkdress.jpg', 5400.00, 40, 'clothes', 'vignesh@gmail.com'),
+ (10, 'scarves', 'SC01', 'product-images/scarves.jpg', 5400.00, 40, 'clothes', 'vignesh@gmail.com'),
 
- (11, 'heels', 'HL004', 'product-images/heels.jpg', 6400.00, 8, 'accessories', 'drishti@gmail.com'),
+ (11, 'Black Sash', 'SH004', 'product-images/sashes.jpg', 6400.00, 8, 'accessories', 'drishti@gmail.com'),
 
- (12, 'wedges', 'WHL02', 'product-images/wedges.jpg', 5600.00, 8, 'accessories', 'vignesh@gmail.com'),
+ (12, 'Brown Bag', 'WHL02', 'product-images/weekender.jpg', 5600.00, 8, 'accessories', 'vignesh@gmail.com'),
 
  (13, 'Denim jacket', 'DJKT1', 'product-images/denimjacket.jpg', 4400.00, 40, 'clothes', 'mihika@gmail.com'),
 
- (14, 'Denim jacket', 'DJKT2', 'product-images/denimjacket2.jpg', 4400.00, 40, 'clothes', 'mihika@gmail.com'),
+ (14, 'Cologne', 'DJKT2', 'product-images/cologne.jpg', 4400.00, 40, 'clothes', 'mihika@gmail.com'),
 
- (15, 'UNX Boots', 'BO08', 'product-images/boots.jpg', 7800.00, 20, 'shoes', 'vignesh@gmail.com'),
+ (15, 'Boots', 'BO08', 'product-images/boots.jpg', 7800.00, 20, 'shoes', 'vignesh@gmail.com'),
 
  (16, 'Blue Print Dress', 'BPD7', 'product-images/D2.jpg', 2500.00, 20, 'clothes', 'drishti@gmail.com'),
 
