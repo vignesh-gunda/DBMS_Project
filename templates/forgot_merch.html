@@ -1,11 +1,10 @@
-
-
 <!doctype html>
+
 <html lang="en">
 
 <head>
 
-    
+
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,42 +19,41 @@
 </head>
 
 <div class="header">
-	<a href="" class="logo">HotPink</a>
-	<div class="header-right">
-		<a href="/">Back</a>
-		<!-- <a href="/cart"><i class="fa fa-shopping-cart fa-2x"></i></a> -->
-	</div>
+    <a href="" class="logo">HotPink</a>
+    <div class="header-right">
+        <a href="/">Back</a>
+        <!-- <a href="/cart"><i class="fa fa-shopping-cart fa-2x"></i></a> -->
+    </div>
 </div>
-	<title>Forgot password?</title>
-    <p>Don't worry. We can help.</p>
-	
-    <div>
-        {% with messages = get_flashed_messages() %}
-          {% if messages %}
-          <ul class=flashes>
-          {% for message in messages %}
-            <li>{{ message }}</li>
-          {% endfor %}
-          </ul>
-          {% endif %}
-        {% endwith %}
-      </div>
-      
+<title>Forgot password?</title>
+<p>Don't worry. We can help.</p>
 
-	<form method="POST" action="/merchforgot">
-		<dl>
-			<p>
-				<input name="inputName" value="" type="text" placeholder="Name" >
-			</p>
-			<p>
-				<input name="inputEmail" value="" type="text" placeholder="Email" >
-			</p>
-			<p>
-				<input name="inputPassword" value="" type="password" placeholder="Password">
-			</p>
-		</dl>
-		<p>
-			
-			<input type="submit" value="Submit">
-		</p>
-	</form>
+<div>
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %} {% endwith %}
+</div>
+
+
+<form method="POST" action="/merchforgot">
+    <div class="container">
+        <dl>
+            <p>
+                <input name="inputName" value="" type="text" placeholder="Name" required>
+            </p>
+            <p>
+                <input name="inputEmail" value="" type="text" placeholder="Email" required>
+            </p>
+            <p>
+                <input name="inputPassword" value="" type="password" placeholder="Password" required>
+            </p>
+        </dl>
+        <p>
+            <input type="submit" value="Update" class="registerbtn">
+        </p>
+    </div>
+</form>
