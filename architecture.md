@@ -76,3 +76,9 @@ Within the Database 'hotpink', we have tables for different requirements:
     - Table for User's personal information- name phone number
     - encrypted password 
 
+### ER diagram and table schema diagram
+
+![1](https://user-images.githubusercontent.com/89929088/145784695-9dd6f86f-908c-408e-9e97-82a9255024a6.png)
+
+
+![2](https://user-images.githubusercontent.com/89929088/145784797-3bff1510-2187-45ee-a0cb-0ffa0e556a0d.png)
