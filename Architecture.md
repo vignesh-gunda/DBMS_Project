@@ -1,10 +1,12 @@
 
 ## FRONT END
+The front end for the system has a main index page in the beginning which can redirect to sign up and login of the merchant as well as user interfaces.
 
-
+### USER
 #### USER AUTHENTICATION:
 1. Login page  
-    - users will be verified from database  
+    - users will be verified from database 
+ 
 2. Register page
     - registers the users and stores new users in 'tbl_user' table in hotpink database.
   
@@ -12,8 +14,12 @@
     - users are redirected to this page if they click on the button which enables them to change password
 
 #### USER PROFILE
-1. Home page 
-1. Cart
+1. Products page 
+    - users can add items present on this page to the cart, remove them, clear the cart, or check out once      done.
+2. Checkout page
+    - upon checking out the users are directed to a page where they need to add details like address, name      and payment options.
+3. Order Confirmation page
+    - once the order is stored in the database, it is  
 
 ## BACK END
 Connecting the front end to database and adding a little functionality in the website
@@ -30,10 +36,8 @@ Within the Database 'Hotpink', we have tables for different requirements
 
 ### FRONT END GRAPHIC REPRESENTATION
 
-![two](https://user-images.githubusercontent.com/69295385/141489507-0fd1604d-787c-43a8-91e1-0ff866623b08.jpeg)
-
-
-
 ![1](https://user-images.githubusercontent.com/89929088/145784695-9dd6f86f-908c-408e-9e97-82a9255024a6.png)
+
+
 ![2](https://user-images.githubusercontent.com/89929088/145784797-3bff1510-2187-45ee-a0cb-0ffa0e556a0d.png)
 
