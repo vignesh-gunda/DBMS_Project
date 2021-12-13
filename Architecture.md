@@ -37,14 +37,15 @@ The front end for the system has a main index page in the beginning which can re
 2. Add product page
     - Merchants can fill in a little information to add a new product to the products table under their         name
 3. Edit product page
-    - This page helps us edit product information such as price and quantity
+    - This page helps us edit product information such as price and quantity. There is also an option to delete the product here.
 
 # BACK END
-Connecting the front end to database and adding a python flask functionality in the website
+Connecting the front end to database and adding a python flask functionality in the website.
 
 ## FUNCTIONALITY
-We add functionality into the website using python.
+We added functionality into the website using python.
 All forms are validated as needed and we check for wrong inputs wherever input is necessary.
+The website is well connected.
 
 ## DATABASE
 The data storing in the database for the website called 'hotpink' is fully consistent.
