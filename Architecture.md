@@ -1,8 +1,8 @@
 
-## FRONT END
+# FRONT END
 The front end for the system has a main index page in the beginning which can redirect to sign up and login of the merchant as well as user interfaces.
 
-### USER
+## USER
 #### USER AUTHENTICATION:
 1. Login page  
     - users will be verified from database 
@@ -21,13 +21,32 @@ The front end for the system has a main index page in the beginning which can re
 3. Order Confirmation page
     - once the order is stored in the database, you are redirected to the order confirmation page
 
-## BACK END
+#### MERCHANT AUTHENTICATION:
+1. Login page  
+    - merchants will be verified from database 
+ 
+2. Register page
+    - registers the merchants and stores new users in 'tbl_user' table in hotpink database.
+  
+3. Forgot Password page
+    - merchants are redirected to this page which enables them to change password
+
+#### MERCHANT PROFILE
+1. Home page 
+    - Merchants can be directed to either the add product page or edit product page.
+2. Add product page
+    - Merchants can fill in a little information to add a new product to the products table under their         name
+3. Edit product page
+    - This page helps us edit product information such as price and quantity
+
+# BACK END
 Connecting the front end to database and adding a python flask functionality in the website
-### FUNCTIONALITY
+
+## FUNCTIONALITY
 We add functionality into the website using python.
 All forms are validated as needed and we check for wrong inputs wherever input is necessary.
 
-### DATABASE
+## DATABASE
 The data storing in the database for the website called 'hotpink' is fully consistent.
 Within the Database 'hotpink', we have tables for different requirements:
 
@@ -57,7 +76,7 @@ Within the Database 'hotpink', we have tables for different requirements:
     - Table for User's personal information- name phone number
     - encrypted password 
 
-### FRONT END GRAPHIC REPRESENTATION
+### ER diagram and table schema diagram
 
 ![1](https://user-images.githubusercontent.com/89929088/145784695-9dd6f86f-908c-408e-9e97-82a9255024a6.png)
 
