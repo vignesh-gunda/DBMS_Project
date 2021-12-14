@@ -78,7 +78,9 @@ Within the Database 'hotpink', we have tables for different requirements:
 
 ### ER diagram and table schema diagram
 
-![1](https://user-images.githubusercontent.com/89929088/145784695-9dd6f86f-908c-408e-9e97-82a9255024a6.png)
+
+![2](https://user-images.githubusercontent.com/89929088/146004380-2ccbe00e-f205-4a57-8738-1354e97c112f.png)
 
 
-![2](https://user-images.githubusercontent.com/89929088/145784797-3bff1510-2187-45ee-a0cb-0ffa0e556a0d.png)
+![1](https://user-images.githubusercontent.com/89929088/146004352-2f3551a4-1dbf-4053-b05a-f12feef6c00f.png)
+
