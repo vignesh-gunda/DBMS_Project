@@ -659,5 +659,5 @@ def merchant_delete_product(id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
 
