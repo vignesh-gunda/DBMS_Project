@@ -118,7 +118,8 @@ CREATE TABLE user_information
      
     product_price int unsigned NOT null,
     
-    product_quantity int NOT NULL);
+    product_quantity int NOT NULL,
+     product_total_price int NOT NULL);
     
 --     merchant table- personal info of merchants
     CREATE TABLE `tbl_merchant`
