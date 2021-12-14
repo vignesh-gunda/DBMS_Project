@@ -282,7 +282,7 @@ def checkoutcomp():
 
 		headings = ("Product Name", "Product Code", "Individual Price", "Total Price", "Total Quantity")
 		orders = ()
-
+		total_price_to_pay = 0
 		for row in rows:
 			con = mysql.connect()
 			cur = con.cursor()
@@ -291,7 +291,8 @@ def checkoutcomp():
 			_productprice = row[3]
 			_productquantity = row[4]
 			_totalprice = int(_productprice) * int(_productquantity)
-			orders = orders + ((_productname,_productcode,_productprice, _totalprice, _productquantity,),)
+			total_price_to_pay = total_price_to_pay + _totalprice
+			orders = orders + ((_productname,_productcode,_productprice, _totalprice, _productquantity),)
 			sql = "INSERT INTO orders( OrderID, user_email, user_name, product_name, product_code, product_price, product_quantity, product_total_price) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"
 			data = (_orderno, _email, _name, _productname,_productcode, _productprice, _productquantity, _totalprice,)
 			cur.execute(sql, data)
@@ -311,7 +312,7 @@ def checkoutcomp():
 		
 		c_cursor.execute("TRUNCATE TABLE cart")
 		c_conn.commit()
-		return render_template('thank.html', headings=headings, orders=orders)
+		return render_template('thank.html', headings=headings, orders=orders, total_price_to_pay=total_price_to_pay)
 	except Exception as e:
 		print(e)
 		
